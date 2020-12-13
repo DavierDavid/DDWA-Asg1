@@ -18,6 +18,8 @@ https://xd.adobe.com/view/49e87154-c642-48e4-8d33-cc5dd66ca7d7-1cbb/
 
 ## Features
 
+Users can log out by clicking on the profile icon at the top right corner.
+
 Admin
  - Admin can view all projects
  - Admin can view all students with and without notebooks
@@ -37,6 +39,9 @@ Lecturer
 
  
 ### Existing Features
+
+Users can log out by clicking on the profile icon at the top right corner.
+
 Admin
  - Admin can view all projects
  - Admin can view all students with and without notebooks
@@ -70,6 +75,21 @@ Additional features to be implemented in the future:
 - [XAMPP](https://www.apachefriends.org/index.html)
     - The project uses **XAMPP** to host the database on localhost and access the database.
 
+## Login details
+
+Admin
+- admin
+- 123
+
+Student
+- student
+- 123
+
+Lecturer
+- lecturer
+- 123
+
+Click on profile icon to log out
 
 ## Credits
 
