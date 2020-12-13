@@ -55,7 +55,7 @@
     <div class="main-content">
 
     <div class="table-container">
-        <div class="header">Projects</div><br>
+        <div class="header">Softwares</div><br>
 
         <div>
 
@@ -64,14 +64,13 @@
                     <thead class="table-head">  
                         <tr class="border-0">
                             <th class="border-0">ID</th>
-                            <th class="border-0">Project Title</th>
-                            <th class="border-0">Company</th>
-                            <th class="border-0">Supervisor</th>
-                            <th class="border-0">Budget</th>
-                            <th class="border-0">Software</th>
-                            <th class="border-0">Start Date</th>
-                            <th class="border-0">End Date</th>
-                            <th class="border-0">Description</th>
+                            <th class="border-0">Software Title</th>
+                            <th class="border-0">Category ID</th>
+                            <th class="border-0">Category</th>
+                            <th class="border-0">Publisher</th>
+                            <th class="border-0">Price per copy</th>
+                            <th class="border-0">License</th>
+                            <th class="border-0">Date purchased</th>
                         </tr>
                     </thead>
 
@@ -79,25 +78,23 @@
 
                         <tr>
                             <td>0</td>
-                            <td>Assignment 1</td>
-                            <td>Ngee Ann Poly</td>
-                            <td>Mr Malcolm</td>
-                            <td>$20.00</td>
-                            <td>After Effects</td>
-                            <td>12/12/2020 </td>
+                            <td>Photoshop</td>
+                            <td>0</td>
+                            <td>Editing</td>
+                            <td>Adobe</td>
+                            <td>$2</td>
+                            <td>Student</td>
                             <td>14/12/2020</td>
-                            <td>Nid to do assignment</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>Assignment 2 </td>
-                            <td>Ngee Ann Poly</td>
-                            <td>Mr Elyas</td>
-                            <td>$288.00</td>
-                            <td>Photoshop</td>
-                            <td>30/2/2020</td>
+                            <td>After Effects</td>
+                            <td>0</td>
+                            <td>Editing</td>
+                            <td>Adobe</td>
+                            <td>$50</td>
+                            <td>Student</td>
                             <td>31/2/2020</td>
-                            <td>Nid to do assignment</td>
                         </tr>
                         
                     </tbody>
@@ -105,6 +102,42 @@
         </div>
         
     </div>
+
+    <div class="table-container">
+        <div class="header">Category</div><br>
+
+        <div>
+
+                <table class="table">
+
+                    <thead class="table-head">  
+                        <tr class="border-0">
+                            <th class="border-0">ID</th>
+                            <th class="border-0">Category Name</th>
+                            <th class="border-0">Software ID</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>0</td>
+                            <td>Editing</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Web Browser</td>
+                            <td>2</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+        </div>
+        
+    </div>
+
+    
 
     </div>
   

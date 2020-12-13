@@ -55,7 +55,7 @@
     <div class="main-content">
 
     <div class="table-container">
-        <div class="header">Projects</div><br>
+        <div class="header">Lecturers</div><br>
 
         <div>
 
@@ -64,14 +64,12 @@
                     <thead class="table-head">  
                         <tr class="border-0">
                             <th class="border-0">ID</th>
-                            <th class="border-0">Project Title</th>
-                            <th class="border-0">Company</th>
-                            <th class="border-0">Supervisor</th>
-                            <th class="border-0">Budget</th>
-                            <th class="border-0">Software</th>
-                            <th class="border-0">Start Date</th>
-                            <th class="border-0">End Date</th>
-                            <th class="border-0">Description</th>
+                            <th class="border-0">Lecturer Name</th>
+                            <th class="border-0">Project ID</th>
+                            <th class="border-0">Project Hours</th>
+                            <th class="border-0">Contact</th>
+                            <th class="border-0">Office</th>
+                            <th class="border-0">Date Joined</th>
                         </tr>
                     </thead>
 
@@ -79,25 +77,21 @@
 
                         <tr>
                             <td>0</td>
-                            <td>Assignment 1</td>
-                            <td>Ngee Ann Poly</td>
                             <td>Mr Malcolm</td>
-                            <td>$20.00</td>
-                            <td>After Effects</td>
-                            <td>12/12/2020 </td>
-                            <td>14/12/2020</td>
-                            <td>Nid to do assignment</td>
+                            <td>1</td>
+                            <td>17 Hours</td>
+                            <td>87654321</td>
+                            <td>Blk 31, #07-01</td>
+                            <td>12/12/2005</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>Assignment 2 </td>
-                            <td>Ngee Ann Poly</td>
                             <td>Mr Elyas</td>
-                            <td>$288.00</td>
-                            <td>Photoshop</td>
-                            <td>30/2/2020</td>
-                            <td>31/2/2020</td>
-                            <td>Nid to do assignment</td>
+                            <td>0</td>
+                            <td>8 Hours</td>
+                            <td>12345678</td>
+                            <td>Blk 27, #04-21</td>
+                            <td>30/2/2017</td>
                         </tr>
                         
                     </tbody>

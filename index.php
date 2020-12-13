@@ -1,4 +1,24 @@
-<?php ?>
+<?php
+/*
+ // 1. Create a database connection
+ $dbhost = "127.0.0.1:8080";
+ $dbuser = "root";
+ $dbpass = "";
+ $dbname = "ddwaasg1";
+ $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+//$mysqli = new sqli("127.0.0.1:8080","root",""<"ddwaasg1");
+ 
+ // Test if connection occurred.
+ if(mysqli_connect_errno()) {
+   die("Database connection failed: " . 
+        mysqli_connect_error() . 
+        " (" . mysqli_connect_errno() . ")"
+   );
+ }
+ else{ //continued within body tag
+    echo("failed");
+ }*/
+?>
 
 
 <html lang="en">
