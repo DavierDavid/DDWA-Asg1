@@ -34,6 +34,7 @@ $( document ).ready(function() {
         }
         else if((userInput == studentID) && (passInput == studentPW)){
             console.log("student logged!");
+            window.location.href = 'student-main.php';
         }
         else if((userInput == lecturerID) && (passInput == lecturerPW)){
             console.log("lecturer logged!");
@@ -44,6 +45,17 @@ $( document ).ready(function() {
         }
     }
 
+    //------------- Function to log out -----------------------------------------------------------
+
+    //Get button on click
+    $("#logoutBtn").click(function(){
+        logOut();
+    });
+
+    //function
+    function logOut(){
+        window.location.href = 'index.php';
+    }
 
 
 

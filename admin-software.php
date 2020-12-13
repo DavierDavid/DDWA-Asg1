@@ -27,7 +27,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sign In</title>
+    <title>Softwares | Admin</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -41,7 +41,7 @@
     <!-- admin, project page  -->
     <!-- ============================================================== -->
 
-    <div class="topnav"><div class="nav-title">Database</div><ion-icon class="icon" name="person-circle"></ion-icon> </div>
+    <div class="topnav"><div class="nav-title">Database</div><ion-icon id="logoutBtn" class="icon" name="person-circle"></ion-icon> </div>
 
     <div class="sidenav">
         <ul class="link-container">

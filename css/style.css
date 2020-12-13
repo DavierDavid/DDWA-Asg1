@@ -85,6 +85,7 @@ body{
     float: right;
     font-size: 58px;
     padding: 10px 25px;
+    z-index: 10;
 }
 
 .nav-title{
@@ -138,6 +139,13 @@ body{
     top: 10%;
 }
 
+.account-content{
+    position: relative;
+    width: 75%;
+    left: 20%;
+    top: 10%;
+}
+
 .header{
     font-size: 48px;
     padding: 0 0 15px 0;
@@ -147,16 +155,32 @@ body{
     margin: 5% 10%;
 }
 
+.table-container2{
+    margin: 5% 20%;
+}
+
 .table{
     background-color: red;
     font-size: 24px;
     text-align: center;
 }
 
-.table-head{
-    
-}
 
 .border-0{
     padding: 15px;
+}
+
+.user-Name{
+    font-size: 46px;
+    padding: 20px 40px 0px 0px;
+}
+
+.student-ID{
+    font-size: 26px;
+    padding: 0px 40px 20px 0px;
+}
+
+.user-details{
+    font-size: 20px;
+    padding: 0px 20px 0 0;
 }
