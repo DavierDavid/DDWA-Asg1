@@ -38,6 +38,7 @@ $( document ).ready(function() {
         }
         else if((userInput == lecturerID) && (passInput == lecturerPW)){
             console.log("lecturer logged!");
+            window.location.href = 'lecturer-main.php';
         }
         else{
             console.log("wrong pass/user");
