@@ -2,9 +2,9 @@
 
  // 1. Create a database connection
  $dbhost = "127.0.0.1";
- $dbuser = "root";
- $dbpass = "";
- $dbname = "ddwaasg1";
+ $dbuser = "amphibis_davier";
+ $dbpass = "g0n@$#kRAYiD";
+ $dbname = "amphibis_davier";
  $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 //$mysqli = new sqli("127.0.0.1:8080","root",""<"ddwaasg1");
  
