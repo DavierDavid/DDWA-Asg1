@@ -1,11 +1,11 @@
 <?php
-/*
+
  // 1. Create a database connection
- $dbhost = "127.0.0.1:8080";
+ $dbhost = "127.0.0.1";
  $dbuser = "root";
  $dbpass = "";
  $dbname = "ddwaasg1";
- $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+ $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 //$mysqli = new sqli("127.0.0.1:8080","root",""<"ddwaasg1");
  
  // Test if connection occurred.
@@ -15,9 +15,8 @@
         " (" . mysqli_connect_errno() . ")"
    );
  }
- else{ //continued within body tag
-    echo("failed");
- }*/
+ else{
+ }
 ?>
 
 
@@ -55,7 +54,7 @@
         <div>
 
                 <table class="table">
-
+<!--
                     <thead class="table-head">  
                         <tr class="border-0">
                             <th class="border-0">ID</th>
@@ -67,18 +66,21 @@
                             <th class="border-0">Description</th>
                         </tr>
                     </thead>
-
+-->
                     <tbody>
 
-                        <tr>
-                            <td>0</td>
-                            <td>Assignment 1</td>
-                            <td>Ngee Ann Poly</td>
-                            <td>Mr Malcolm</td>
-                            <td>12/12/2020 </td>
-                            <td>14/12/2020</td>
-                            <td>Nid to do assignment</td>
-                        </tr>
+                    <?php
+                    $sql = "SELECT project.project_Title, project.company_Name, project.lecturer_Name, project.start_Date, project.end_Date, project.project_desc FROM `project` INNER JOIN `student` ON project.project_ID = student.project_ID WHERE project.project_ID = 0;";
+                    if ($result = mysqli_query($con,$sql)){
+                        $row = mysqli_fetch_assoc($result);
+                        $html = '<table><tr><th class="border-0">' .implode('</th><th class="border-0">', array_keys($row)).'</th></tr>';
+                        do{
+                            $html .= '<tr><td>'.implode('</td><td>', $row).'</td></tr>';
+                        }while($row = mysqli_fetch_assoc($result));
+                        $html .='</table>';
+                    }
+                    echo $html;
+                    ?>
                         
                     </tbody>
                 </table>

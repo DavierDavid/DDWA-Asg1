@@ -1,11 +1,11 @@
 <?php
-/*
+
  // 1. Create a database connection
- $dbhost = "127.0.0.1:8080";
+ $dbhost = "127.0.0.1";
  $dbuser = "root";
  $dbpass = "";
  $dbname = "ddwaasg1";
- $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+ $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 //$mysqli = new sqli("127.0.0.1:8080","root",""<"ddwaasg1");
  
  // Test if connection occurred.
@@ -15,9 +15,8 @@
         " (" . mysqli_connect_errno() . ")"
    );
  }
- else{ //continued within body tag
-    echo("failed");
- }*/
+ else{
+ }
 ?>
 
 
@@ -55,12 +54,12 @@
     <div class="main-content">
 
     <div class="table-container">
-        <div class="header">Students without Notebooks</div><br>
+        <div class="header">Students</div><br>
 
         <div>
 
                 <table class="table">
-
+                    <!--
                     <thead class="table-head">  
                         <tr class="border-0">
                             <th class="border-0">ID</th>
@@ -72,77 +71,23 @@
                             <th class="border-0">Yeaer out</th>
                         </tr>
                     </thead>
-
+-->
                     <tbody>
 
-                        <tr>
-                            <td>0</td>
-                            <td>Joses Kang</td>
-                            <td>ICT</td>
-                            <td>87654321</td>
-                            <td>1</td>
-                            <td>2019</td>
-                            <td>2022</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Davier Toh</td>
-                            <td>ICT</td>
-                            <td>12345678</td>
-                            <td>0</td>
-                            <td>2018</td>
-                            <td>2021</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-        </div>
-        
-    </div>
+                    <?php
+                    $sql = "SELECT * FROM student";
+                    if ($result = mysqli_query($con,$sql)){
+                        $row = mysqli_fetch_assoc($result);
+                        $html = '<table><tr><th class="border-0">' .implode('</th><th class="border-0">', array_keys($row)).'</th></tr>';
+                        do{
+                            $html .= '<tr><td>'.implode('</td><td>', $row).'</td></tr>';
+                        }
+                        while($row = mysqli_fetch_assoc($result));
 
-    <div class="table-container">
-        <div class="header">Students with Notebooks</div><br>
-
-        <div>
-
-                <table class="table">
-
-                    <thead class="table-head">  
-                        <tr class="border-0">
-                            <th class="border-0">ID</th>
-                            <th class="border-0">Student Name</th>
-                            <th class="border-0">School</th>
-                            <th class="border-0">Contact</th>
-                            <th class="border-0">Project ID</th>
-                            <th class="border-0">Year in</th>
-                            <th class="border-0">Year out</th>
-                            <th class="border-0">Notebook ID</th>
-
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>2</td>
-                            <td>Irfan Shah</td>
-                            <td>FMS</td>
-                            <td>87654321</td>
-                            <td>1</td>
-                            <td>2019</td>
-                            <td>2022</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Bing Heng</td>
-                            <td>BA</td>
-                            <td>12345678</td>
-                            <td>2</td>
-                            <td>2018</td>
-                            <td>2021</td>
-                            <td>1</td>
-                        </tr>
+                        $html .='</table>';
+                    }
+                    echo $html;
+                    ?>
                         
                     </tbody>
                 </table>
@@ -156,7 +101,7 @@
         <div>
 
                 <table class="table">
-
+                    <!--
                     <thead class="table-head">  
                         <tr class="border-0">
                             <th class="border-0">Notebook ID</th>
@@ -173,37 +118,23 @@
                             <th class="border-0">Processor</th>
                         </tr>
                     </thead>
-
+                    -->
                     <tbody>
 
-                        <tr>
-                            <td>0</td>
-                            <td>2</td>
-                            <td>Irfan Shah</td>
-                            <td>0</td>
-                            <td>Photoshop</td>
-                            <td>123456</td>
-                            <td>HP</td>
-                            <td>Pavilion</td>
-                            <td>Windows</td>
-                            <td>16GB</td>
-                            <td>2TB</td>
-                            <td>Intel</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>3</td>
-                            <td>Bing Heng</td>
-                            <td>3</td>
-                            <td>After Effects</td>
-                            <td>654321</td>
-                            <td>Apple</td>
-                            <td>Apple</td>
-                            <td>Mac OS</td>
-                            <td>8GB</td>
-                            <td>1TB</td>
-                            <td>Silicon</td>
-                        </tr>
+                    <?php
+                    $sql = "SELECT * FROM notebook";
+                    if ($result = mysqli_query($con,$sql)){
+                        $row = mysqli_fetch_assoc($result);
+                        $html = '<table><tr><th class="border-0">' .implode('</th><th class="border-0">', array_keys($row)).'</th></tr>';
+                        do{
+                            $html .= '<tr><td>'.implode('</td><td>', $row).'</td></tr>';
+                        }
+                        while($row = mysqli_fetch_assoc($result));
+
+                        $html .='</table>';
+                    }
+                    echo $html;
+                    ?>
                         
                     </tbody>
                 </table>

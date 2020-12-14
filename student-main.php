@@ -1,11 +1,11 @@
 <?php
-/*
+
  // 1. Create a database connection
- $dbhost = "127.0.0.1:8080";
+ $dbhost = "127.0.0.1";
  $dbuser = "root";
  $dbpass = "";
  $dbname = "ddwaasg1";
- $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+ $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 //$mysqli = new sqli("127.0.0.1:8080","root",""<"ddwaasg1");
  
  // Test if connection occurred.
@@ -15,9 +15,8 @@
         " (" . mysqli_connect_errno() . ")"
    );
  }
- else{ //continued within body tag
-    echo("failed");
- }*/
+ else{
+ }
 ?>
 
 
@@ -51,32 +50,13 @@
     <div class="account-content">
 
 
-                <div>
-                    <h2 class="user-Name">Joses Kang</h2>
-                    <div class="student-ID">Student ID: <a id="stdID">0</a></div>
-                </div>
 
-                    
-
-                <div>
-                    <div>
-                        <span class="user-details" id="userSchool">ICT</span>
-                        <span class="user-details" id="userContact">87654321</span>
-                        <span class="user-details" id="userYearIn">2019</span>
-                        <span class="user-details" id="userYearOut">2022</span>
-                    </div>
-                </div>
-
-    </div>
-
-    <br><br><br>
-
-    <div class="table-container2">
-        <div class="header">Notebook</div><br>
+        <div class="header">Student</div><br>
 
         <div>
 
                 <table class="table">
+                    <!--
 
                     <thead class="table-head">  
                         <tr class="border-0">
@@ -92,21 +72,70 @@
                             <th class="border-0">Processor</th>
                         </tr>
                     </thead>
+-->
 
                     <tbody>
 
-                        <tr>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>Photoshop</td>
-                            <td>123456</td>
-                            <td>HP</td>
-                            <td>Pavilion</td>
-                            <td>Windows</td>
-                            <td>16GB</td>
-                            <td>2TB</td>
-                            <td>Intel</td>
+                    <?php
+                    $sql = "SELECT * FROM `student` WHERE `student_id` = '0'";
+                    if ($result = mysqli_query($con,$sql)){
+                        $row = mysqli_fetch_assoc($result);
+                        $html = '<table><tr><th class="border-0">' .implode('</th><th class="border-0">', array_keys($row)).'</th></tr>';
+                        do{
+                            $html .= '<tr><td>'.implode('</td><td>', $row).'</td></tr>';
+                        }while($row = mysqli_fetch_assoc($result));
+                        $html .='</table>';
+                    }
+                    echo $html;
+                    ?>
+         
+                    </tbody>
+        </div>
+        
+    </div>
+
+    </div>
+
+    <br><br><br>
+
+    <div class="table-container2">
+        <div class="header">Notebook</div><br>
+
+        <div>
+
+                <table class="table">
+                    <!--
+
+                    <thead class="table-head">  
+                        <tr class="border-0">
+                            <th class="border-0">Notebook ID</th>
+                            <th class="border-0">Software ID</th>
+                            <th class="border-0">Software Name</th>
+                            <th class="border-0">Serial No.</th>
+                            <th class="border-0">Make</th>
+                            <th class="border-0">Model</th>
+                            <th class="border-0">OS</th>
+                            <th class="border-0">RAM</th>
+                            <th class="border-0">Disk Space</th>
+                            <th class="border-0">Processor</th>
                         </tr>
+                    </thead>
+-->
+
+                    <tbody>
+
+                    <?php
+                    $sql = "SELECT * FROM `notebook` WHERE `student_id` = '0'";
+                    if ($result = mysqli_query($con,$sql)){
+                        $row = mysqli_fetch_assoc($result);
+                        $html = '<table><tr><th class="border-0">' .implode('</th><th class="border-0">', array_keys($row)).'</th></tr>';
+                        do{
+                            $html .= '<tr><td>'.implode('</td><td>', $row).'</td></tr>';
+                        }while($row = mysqli_fetch_assoc($result));
+                        $html .='</table>';
+                    }
+                    echo $html;
+                    ?>
                         
                     </tbody>
                 </table>

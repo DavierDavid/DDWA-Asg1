@@ -1,11 +1,11 @@
 <?php
-/*
+
  // 1. Create a database connection
- $dbhost = "127.0.0.1:8080";
+ $dbhost = "127.0.0.1";
  $dbuser = "root";
  $dbpass = "";
  $dbname = "ddwaasg1";
- $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+ $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 //$mysqli = new sqli("127.0.0.1:8080","root",""<"ddwaasg1");
  
  // Test if connection occurred.
@@ -15,9 +15,8 @@
         " (" . mysqli_connect_errno() . ")"
    );
  }
- else{ //continued within body tag
-    echo("failed");
- }*/
+ else{
+ }
 ?>
 
 

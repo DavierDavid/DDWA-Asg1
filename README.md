@@ -102,3 +102,5 @@ References used,
 
 - I received inspiration for this project from
     - Bootstrap template, Concept, https://github.com/puikinsh/concept
+- I got the codes for displaying SQL from
+    - https://stackoverflow.com/questions/39439932/how-to-write-data-into-multiple-html-table-columns-with-php

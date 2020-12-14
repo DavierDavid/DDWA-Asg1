@@ -1,11 +1,11 @@
 <?php
-/*
+
  // 1. Create a database connection
- $dbhost = "127.0.0.1:8080";
+ $dbhost = "127.0.0.1";
  $dbuser = "root";
  $dbpass = "";
  $dbname = "ddwaasg1";
- $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+ $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 //$mysqli = new sqli("127.0.0.1:8080","root",""<"ddwaasg1");
  
  // Test if connection occurred.
@@ -15,9 +15,8 @@
         " (" . mysqli_connect_errno() . ")"
    );
  }
- else{ //continued within body tag
-    echo("failed");
- }*/
+ else{
+ }
 ?>
 
 
@@ -51,23 +50,46 @@
     <div class="account-content">
 
 
-                <div>
-                    <h2 class="user-Name">Elyas Chua-Aziz</h2>
-                    <div class="student-ID">Lecturer ID: <a id="stdID">1</a></div>
-                </div>
+    <div class="header">Lecturer</div><br>
 
-                    
+<div>
 
-                <div>
-                    <div>
-                        <span class="user-details" id="userSchool">Blk 27, #04-21</span>
-                        <span class="user-details" id="userContact">87654321</span>
-                        <span class="user-details" id="userYearIn">2017</span>
-                    </div>
-                </div>
+        <table class="table">
+            <!--
 
-    </div>
+            <thead class="table-head">  
+                <tr class="border-0">
+                    <th class="border-0">Notebook ID</th>
+                    <th class="border-0">Software ID</th>
+                    <th class="border-0">Software Name</th>
+                    <th class="border-0">Serial No.</th>
+                    <th class="border-0">Make</th>
+                    <th class="border-0">Model</th>
+                    <th class="border-0">OS</th>
+                    <th class="border-0">RAM</th>
+                    <th class="border-0">Disk Space</th>
+                    <th class="border-0">Processor</th>
+                </tr>
+            </thead>
+-->
 
+            <tbody>
+
+            <?php
+            $sql = "SELECT * FROM `lecturer` WHERE `lecturer_id` = '0'";
+            if ($result = mysqli_query($con,$sql)){
+                $row = mysqli_fetch_assoc($result);
+                $html = '<table><tr><th class="border-0">' .implode('</th><th class="border-0">', array_keys($row)).'</th></tr>';
+                do{
+                    $html .= '<tr><td>'.implode('</td><td>', $row).'</td></tr>';
+                }while($row = mysqli_fetch_assoc($result));
+                $html .='</table>';
+            }
+            echo $html;
+            ?>
+ 
+            </tbody>
+</div>
 
     <script src="js/script.js"></script>
 
